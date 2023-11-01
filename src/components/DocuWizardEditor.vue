@@ -1,6 +1,7 @@
 <template>
     <main id="sample">
-        <Editor :init="editorInit" />
+        <Editor v-model="tiny.content.html" :init="editorInit" />
     </main>
 </template>
-<script src="./DocuWizardEditor.ts" lang="ts"/>
+<script src="./DocuWizardEditor.ts" lang="ts">
+</script>

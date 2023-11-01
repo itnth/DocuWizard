@@ -1,0 +1,121 @@
+.overley-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+}
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100vw - 32px);
+    width: 400px;
+    height: fit-content;
+    // padding: 24px;
+    // box-shadow: 0 0 10px var(--grey-color4);
+    border-radius: 3px;
+    background-color: #fff;
+    animation: down 0.2s ease;
+    border: 1px #dfdfdf solid;
+    @keyframes down {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -200%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .modal-content {
+        .modal-header {
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            padding: 10px 14px;
+            background-color: #f0f0f0;
+            border-bottom: 1px #dfdfdf solid;
+            height: 41px;
+            .modal-title {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .modal-close {
+                height: 24px;
+                width: 24px;
+                display: flex;
+                align-items: center;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
+                border-radius: 4px;
+                .ms-icon {
+                    background-color: #949494;
+                }
+                &:hover {
+                    // border: var(--primary-color) solid 1px;
+                    .ms-icon {
+                        background-color: var(--primary-color);
+                    }
+                }
+                &:active {
+                    outline: var(--blue-color3) 2px solid !important;
+                    .ms-icon {
+                        background-color: var(--primary-color);
+                    }
+                }
+                &:focus {
+                    outline: var(--blue-color3) 2px solid !important;
+                    .ms-icon {
+                        background-color: var(--primary-color);
+                    }
+                }
+            }
+        }
+        .modal-body {
+            padding: 10px;
+            padding-top: 8px;
+            padding-left: 12px;
+            // padding-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            .content-delete {
+                color: var(--red-color5);
+            }
+            .modal-icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+
+                .ms-icon {
+                    transform: scale(0.9);
+                    background-color: #fff;
+                }
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+        .modal-footer {
+            padding: 8px;
+
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px #dfdfdf solid;
+
+            button {
+                height: 32px;
+                line-height: 32px;
+                margin-left: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+}
