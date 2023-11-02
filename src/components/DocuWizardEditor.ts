@@ -1,8 +1,8 @@
-import { defineComponent, onMounted, ref } from 'vue';
-import Editor from '@tinymce/tinymce-vue';
-import tinymce from 'tinymce/tinymce';
-import './DocuWizardEditor.css';
-import { FolderOutlined,FormOutlined, SolutionOutlined } from '@ant-design/icons-vue';
+import { defineComponent, onMounted, ref } from 'vue'
+import Editor from '@tinymce/tinymce-vue'
+import tinymce from 'tinymce/tinymce'
+import './DocuWizardEditor.css'
+import { FolderOutlined, FormOutlined, SolutionOutlined } from '@ant-design/icons-vue'
 export default defineComponent({
   components: {
     Editor,
@@ -11,8 +11,15 @@ export default defineComponent({
     SolutionOutlined
   },
   setup(props, ctx) {
-    const activeKey = ref('1');
-    const doc = ref('<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Tiny Logo" src="https://www.tiny.cloud/docs/images/logos/android-chrome-256x256.png" alt="TinyMCE Logo" width="256" height="256"></p> <p style="text-align: center;"><a href="https://www.tiny.cloud/docs/tinymce/6/" target="_blank" rel="noopener"><span style="font-size: 22px;"><strong>Trang chủ</strong></span></a></p> <p><span style="font-size: 18px;">TinyMCE (Tiny Moxiecode Content Editor) l&agrave; một tr&igrave;nh soạn thảo văn bản HTML m&atilde; nguồn mở ph&aacute;t triển bởi Moxiecode Systems AB. N&oacute; cung cấp một giao diện đồ họa cho việc chỉnh sửa v&agrave; định dạng nội dung tr&ecirc;n trang web của bạn, gi&uacute;p bạn dễ d&agrave;ng tạo v&agrave; quản l&yacute; nội dung tr&ecirc;n c&aacute;c ứng dụng web v&agrave; trang web của bạn.</span></p> <p><span style="font-size: 18px;">Phi&ecirc;n bản TinyMCE Basic (c&ograve;n được gọi l&agrave; TinyMCE Community Edition) l&agrave; phi&ecirc;n bản miễn ph&iacute; v&agrave; m&atilde; nguồn mở của TinyMCE. Dưới đ&acirc;y l&agrave; một số điểm ch&iacute;nh về TinyMCE Basic:</span></p> <ol> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>T&iacute;ch hợp Dễ D&agrave;ng</strong>: TinyMCE Basic c&oacute; t&iacute;ch hợp dễ d&agrave;ng v&agrave;o c&aacute;c ứng dụng web v&agrave; trang web. Bạn c&oacute; thể sử dụng n&oacute; trong hầu hết c&aacute;c dự &aacute;n web, bao gồm c&aacute;c dự &aacute;n Vue.js, React, Angular, v&agrave; nhiều nền tảng kh&aacute;c.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Giao Diện Đồ Họa</strong>: N&oacute; cung cấp một giao diện đồ họa cho ph&eacute;p người d&ugrave;ng cuối dễ d&agrave;ng thực hiện c&aacute;c thao t&aacute;c chỉnh sửa v&agrave; định dạng văn bản m&agrave; kh&ocirc;ng cần biết về m&atilde; HTML.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Phong C&aacute;ch T&ugrave;y Chỉnh</strong>: Bạn c&oacute; thể t&ugrave;y chỉnh giao diện của TinyMCE v&agrave; c&aacute;c t&ugrave;y chọn chỉnh sửa để ph&ugrave; hợp với nhu cầu cụ thể của dự &aacute;n của bạn.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Dự &aacute;n M&atilde; Nguồn Mở</strong>: TinyMCE Basic c&oacute; m&atilde; nguồn mở, v&igrave; vậy bạn c&oacute; thể sửa đổi m&atilde; nguồn để đ&aacute;p ứng c&aacute;c y&ecirc;u cầu cụ thể của dự &aacute;n của bạn.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Hỗ Trợ Plugin v&agrave; T&ugrave;y Chọn Mở Rộng</strong>: Bạn c&oacute; thể mở rộng t&iacute;nh năng của TinyMCE bằng c&aacute;ch sử dụng c&aacute;c plugin v&agrave; t&ugrave;y chọn mở rộng c&oacute; sẵn hoặc tạo c&aacute;c plugin t&ugrave;y chỉnh.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Xử l&yacute; An To&agrave;n</strong>: TinyMCE Basic c&oacute; t&iacute;nh năng bảo mật t&iacute;ch hợp để ngăn chặn c&aacute;c cuộc tấn c&ocirc;ng XSS v&agrave; x&aacute;c thực đối với nội dung đầu v&agrave;o.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Cộng Đồng Hỗ Trợ</strong>: Cộng đồng người d&ugrave;ng v&agrave; ph&aacute;t triển của TinyMCE c&oacute; sẵn để cung cấp hỗ trợ v&agrave; t&agrave;i liệu cho người d&ugrave;ng.</span></p> </li> </ol> <p><span style="font-size: 18px;">Ngo&agrave;i phi&ecirc;n bản Basic, c&oacute; một phi&ecirc;n bản mở rộng v&agrave; thương mại của TinyMCE với nhiều t&iacute;nh năng mạnh mẽ hơn v&agrave; hỗ trợ chuy&ecirc;n nghiệp, được gọi l&agrave; TinyMCE Premium v&agrave; TinyMCE Enterprise, ph&ugrave; hợp với c&aacute;c dự &aacute;n lớn hơn v&agrave; y&ecirc;u cầu cao cấp hơn.</span></p>')
+    const activeKey = ref('1')
+    const doc = ref(
+      '<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Tiny Logo" src="https://www.tiny.cloud/docs/images/logos/android-chrome-256x256.png" alt="TinyMCE Logo" width="256" height="256"></p> <p style="text-align: center;"><a href="https://www.tiny.cloud/docs/tinymce/6/" target="_blank" rel="noopener"><span style="font-size: 22px;"><strong>Trang chủ</strong></span></a></p> <p><span style="font-size: 18px;">TinyMCE (Tiny Moxiecode Content Editor) l&agrave; một tr&igrave;nh soạn thảo văn bản HTML m&atilde; nguồn mở ph&aacute;t triển bởi Moxiecode Systems AB. N&oacute; cung cấp một giao diện đồ họa cho việc chỉnh sửa v&agrave; định dạng nội dung tr&ecirc;n trang web của bạn, gi&uacute;p bạn dễ d&agrave;ng tạo v&agrave; quản l&yacute; nội dung tr&ecirc;n c&aacute;c ứng dụng web v&agrave; trang web của bạn.</span></p> <p><span style="font-size: 18px;">Phi&ecirc;n bản TinyMCE Basic (c&ograve;n được gọi l&agrave; TinyMCE Community Edition) l&agrave; phi&ecirc;n bản miễn ph&iacute; v&agrave; m&atilde; nguồn mở của TinyMCE. Dưới đ&acirc;y l&agrave; một số điểm ch&iacute;nh về TinyMCE Basic:</span></p> <ol> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>T&iacute;ch hợp Dễ D&agrave;ng</strong>: TinyMCE Basic c&oacute; t&iacute;ch hợp dễ d&agrave;ng v&agrave;o c&aacute;c ứng dụng web v&agrave; trang web. Bạn c&oacute; thể sử dụng n&oacute; trong hầu hết c&aacute;c dự &aacute;n web, bao gồm c&aacute;c dự &aacute;n Vue.js, React, Angular, v&agrave; nhiều nền tảng kh&aacute;c.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Giao Diện Đồ Họa</strong>: N&oacute; cung cấp một giao diện đồ họa cho ph&eacute;p người d&ugrave;ng cuối dễ d&agrave;ng thực hiện c&aacute;c thao t&aacute;c chỉnh sửa v&agrave; định dạng văn bản m&agrave; kh&ocirc;ng cần biết về m&atilde; HTML.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Phong C&aacute;ch T&ugrave;y Chỉnh</strong>: Bạn c&oacute; thể t&ugrave;y chỉnh giao diện của TinyMCE v&agrave; c&aacute;c t&ugrave;y chọn chỉnh sửa để ph&ugrave; hợp với nhu cầu cụ thể của dự &aacute;n của bạn.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Dự &aacute;n M&atilde; Nguồn Mở</strong>: TinyMCE Basic c&oacute; m&atilde; nguồn mở, v&igrave; vậy bạn c&oacute; thể sửa đổi m&atilde; nguồn để đ&aacute;p ứng c&aacute;c y&ecirc;u cầu cụ thể của dự &aacute;n của bạn.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Hỗ Trợ Plugin v&agrave; T&ugrave;y Chọn Mở Rộng</strong>: Bạn c&oacute; thể mở rộng t&iacute;nh năng của TinyMCE bằng c&aacute;ch sử dụng c&aacute;c plugin v&agrave; t&ugrave;y chọn mở rộng c&oacute; sẵn hoặc tạo c&aacute;c plugin t&ugrave;y chỉnh.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Xử l&yacute; An To&agrave;n</strong>: TinyMCE Basic c&oacute; t&iacute;nh năng bảo mật t&iacute;ch hợp để ngăn chặn c&aacute;c cuộc tấn c&ocirc;ng XSS v&agrave; x&aacute;c thực đối với nội dung đầu v&agrave;o.</span></p> </li> <li style="font-size: 18px;"> <p><span style="font-size: 18px;"><strong>Cộng Đồng Hỗ Trợ</strong>: Cộng đồng người d&ugrave;ng v&agrave; ph&aacute;t triển của TinyMCE c&oacute; sẵn để cung cấp hỗ trợ v&agrave; t&agrave;i liệu cho người d&ugrave;ng.</span></p> </li> </ol> <p><span style="font-size: 18px;">Ngo&agrave;i phi&ecirc;n bản Basic, c&oacute; một phi&ecirc;n bản mở rộng v&agrave; thương mại của TinyMCE với nhiều t&iacute;nh năng mạnh mẽ hơn v&agrave; hỗ trợ chuy&ecirc;n nghiệp, được gọi l&agrave; TinyMCE Premium v&agrave; TinyMCE Enterprise, ph&ugrave; hợp với c&aacute;c dự &aacute;n lớn hơn v&agrave; y&ecirc;u cầu cao cấp hơn.</span></p>'
+    )
+    const transcript = ref('')
+    const isRecording = ref(false)
+
+    const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition
+    const sr = new Recognition()
     const editorInit = ref({
       toolbar_mode: 'sliding',
       width: '80%',
@@ -95,22 +102,81 @@ export default defineComponent({
       toolbar1:
         'undo redo | styles fontfamily fontsize align lineheight | bold italic underline strikethrough superscript subscript | alignleft aligncenter alignright alignjustify | ' +
         'bullist numlist outdent indent | link image | print preview media fullscreen ',
-      toolbar2: 'save | restoredraft | autosave | forecolor backcolor emoticons | help'
+      toolbar2: 'save | restoredraft | autosave | forecolor backcolor emoticons customToggle help',
+      menubar: 'file edit view formar tools table help custom',
+      setup: function (editor) {
+        let isCustomFeatureEnabled = false
+        // Thêm một biểu tượng tùy chỉnh cho chức năng tắt/bật
+        editor.ui.registry.addToggleButton('customToggle', {
+          icon: 'comment', // Tên biểu tượng tùy chỉnh
+          onAction: function (api) {
+            // Xử lý khi nút tùy chỉnh được nhấn
+            isCustomFeatureEnabled = !isCustomFeatureEnabled
+            api.setActive(!api.isActive())
+            if (isCustomFeatureEnabled) {
+              sr.start()
+            } else {
+              sr.stop()
+            }
+          }
+        })
+      }
     })
     onMounted(() => {
       try {
         /* todo */
         tinymce.init({})
+        sr.continuous = true
+        sr.interimResults = true
+        sr.lang = 'vi-VN'
+        sr.onstart = () => {
+          console.log('SR Started')
+          isRecording.value = true
+        }
+
+        sr.onend = () => {
+          console.log('SR Stopped')
+          isRecording.value = false
+        }
+
+        sr.onresult = (evt) => {
+          for (let i = 0; i < evt.results.length; i++) {
+            const result = evt.results[i]
+
+            if (result.isFinal) {
+              CheckForCommand(result)
+            }
+          }
+
+          const t = Array.from(evt.results)
+            .map((result) => result[0])
+            .map((result) => result.transcript)
+            .join('')
+
+          transcript.value = t
+          doc.value = t.replace('Phẩy.', '').replace('.', '. ')
+        }
       } catch (error) {
         console.log(error)
       }
     })
+    const CheckForCommand = (result) => {
+      const t = result[0].transcript
+      if (t.includes('stop recording')) {
+        sr.stop()
+      } else if (t.includes('what is the time') || t.includes("what's the time")) {
+        sr.stop()
+        alert(new Date().toLocaleTimeString())
+        setTimeout(() => sr.start(), 100)
+      }
+    }
     return {
       editorInit,
       activeKey,
       FormOutlined,
       SolutionOutlined,
-      doc
+      doc,
+      sr
     }
   }
 })
