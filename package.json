@@ -13,7 +13,9 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
     "@tinymce/tinymce-vue": "^5.1.1",
+    "ant-design-vue": "^4.0.0-rc.6",
     "pinia": "^2.1.7",
     "tinymce": "^6.7.2",
     "vue": "^3.3.4",
