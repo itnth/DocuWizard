@@ -23,12 +23,9 @@
       </h1>
       <a-divider orientation="left">Tất cả các tính năng</a-divider>
       <div style="background-color: #ececec" class="p-10">
-        <a-alert
-          message="Warning"
+        <a-alert message="Warning"
           description="Trình soạn thảo này đang dùng core miễn phí của TinyMCE và đã được tùy chỉnh thêm 2 chức năng Format Painter, PowerPaste của bản Productivity có trả phí."
-          type="warning"
-          show-icon
-        />
+          type="warning" show-icon />
         <div class="m-2 ">
           <a-tag color="#cd201f">
             <template #icon>
@@ -45,11 +42,7 @@
         </div>
         <a-row :gutter="16">
           <a-col :span="8">
-            <a-card
-              class="m-2 h-48 border-solid border-2 border-red-500"
-              title="Format Painter"
-              :bordered="false"
-            >
+            <a-card class="m-2 h-48 border-solid border-2 border-red-500" title="Format Painter" :bordered="false">
               <p>
                 Sao chép và dán định dạng, chẳng hạn như kiểu và kích thước phông chữ, từ vị trí nội
                 dung này sang vị trí nội dung khác.
@@ -57,14 +50,17 @@
             </a-card>
           </a-col>
           <a-col :span="8">
-            <a-card
-              class="m-2 h-48 border-solid border-2 border-red-500"
-              title="PowerPaste"
-              :bordered="false"
-            >
+            <a-card class="m-2 h-48 border-solid border-2 border-red-500" title="PowerPaste" :bordered="false">
               <p>
                 Chức năng sao chép/dán sạch sẽ cho Microsoft Word, Google Docs, Excel và các công cụ
                 phổ biến khác.
+              </p>
+            </a-card>
+          </a-col>
+          <a-col :span="8">
+            <a-card class="m-2 h-48 border-solid border-2 border-green-600" title="Speech to text" :bordered="false">
+              <p>
+                Chức năng cho phép chuyển giọng nói thành văn bản.
               </p>
             </a-card>
           </a-col>
